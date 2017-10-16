@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Smartphones</string>
+
+    <string name="transition_name_name">transition:NAME</string>
+    <string name="transition_name_phone">transition:PHONE</string>
+    <string name="transition_name_processor">transition:PROCESSOR</string>
+    <string name="transition_name_ram">transition:RAM</string>
+    <string name="transition_name_inches">transition:INCHES</string>
+    <string name="transition_name_version">transition:VERSION</string>
+
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <string name="action_settings">Settings</string>
+    <string name="smartphones">Smartphones</string>
+    <string name="title_activity_smartphone_details">SmartphoneDetailsActivity</string>
+    <string name="smartphone_details">El Nokia 6 marca el regreso de la marca Nokia al mercado de los smartphones, esta vez de la mano de la plataforma Android. El Nokia 6 destaca entre sus características una pantalla 1080p de 5.5 pulgadas protegida por Gorilla Glass 2.5D, un procesador Snapdragon 430 con 3GB de RAM, 32GB de almacenamiento interno, cámara principal de 16 megapixels con autofoco PDAF, cámara frontal de 8 MP, batería de 3000 mAh y corre Android 7.1.1 Nougat.</string>
+    <string name="close">cerrar</string>
+    <string name="loading_information">Cargando información...</string>
+    <string name="data_base_error">Eror de base de datos</string>
+    <string name="saving_information">Guardando informacion..</string>
+
+</resources>

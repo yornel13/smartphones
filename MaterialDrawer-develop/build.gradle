@@ -1,0 +1,33 @@
+buildscript {
+    ext {
+        setup = [
+                compileSdk: 26,
+                buildTools: "26.0.0",
+                minSdk    : 14,
+                targetSdk : 26
+        ]
+
+        versions = [
+                supportLib: "26.0.0"
+        ]
+    }
+
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:3.0.0-alpha8'
+        classpath 'com.novoda:bintray-release:0.5.0'
+    }
+}
+
+allprojects {
+    repositories {
+        google()
+        jcenter()
+        mavenCentral()
+        maven { url "https://oss.sonatype.org/content/repositories/snapshots/" }
+    }
+}

@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <include
+        android:id="@+id/row_other"
+        android:visibility="gone"
+        layout="@layout/scroll_versions_content" />
+
+    <include
+        android:id="@+id/row_0"
+        layout="@layout/table_row_antutu"/>
+
+    <include
+        android:id="@+id/row_1"
+        layout="@layout/table_row_screen"/>
+
+    <include
+        android:id="@+id/row_2"
+        layout="@layout/table_row_memory"/>
+
+    <include
+        android:id="@+id/row_3"
+        layout="@layout/table_row_processor"/>
+
+    <include
+        android:id="@+id/row_4"
+        layout="@layout/table_row_camera"/>
+
+    <include
+        android:id="@+id/row_5"
+        layout="@layout/table_row_phone"/>
+
+    <include
+        android:id="@+id/row_6"
+        layout="@layout/table_row_connectivity"/>
+
+    <include
+        android:id="@+id/row_7"
+        layout="@layout/table_row_battery"/>
+
+    <include
+        android:id="@+id/row_8"
+        layout="@layout/table_row_kimovil"/>
+
+    <LinearLayout
+        android:id="@+id/container_separator"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,196 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:tag="sticky"
+        android:background="@color/background_title_scroll"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:text="Conectividad"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:gravity="left"
+            android:layout_marginLeft="@dimen/padding_tablet"
+            style="@style/TextTableTitle"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Tabla7"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/padding_tablet"
+        android:layout_marginRight="@dimen/padding_tablet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="2" >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="4G LTE"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                style="@style/TextTableSubtitle" />
+
+            <TextView
+                android:id="@+id/connectivity_lte"
+                android:text="LTE (850, 900, 1800, 1900, 2100, 2300, 2500, 2600)"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                style="@style/TextTableContent" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/row_line_separator"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="3G"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                style="@style/TextTableSubtitle" />
+
+            <TextView
+                android:id="@+id/connectivity_hsap"
+                android:text="HSPA (850, 900, 1800, 2100)"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                style="@style/TextTableContent" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/row_line_separator"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="2G"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                style="@style/TextTableSubtitle" />
+
+            <TextView
+                android:id="@+id/connectivity_gsm"
+                android:text="GSM (850, 900, 1900, 2100)"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                style="@style/TextTableContent" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/row_line_separator"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="Wifi"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                style="@style/TextTableSubtitle" />
+
+            <TextView
+                android:id="@+id/connectivity_wifi"
+                android:text="5 GHz"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                style="@style/TextTableContent" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/row_line_separator"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="Bluetooth"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                style="@style/TextTableSubtitle" />
+
+            <TextView
+                android:id="@+id/connectivity_bluetooth"
+                android:text="5.0"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                style="@style/TextTableContent" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/row_line_separator"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="Navegacion"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                style="@style/TextTableSubtitle" />
+
+            <TextView
+                android:id="@+id/connectivity_navigation"
+                android:text="A-GPS"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                style="@style/TextTableContent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

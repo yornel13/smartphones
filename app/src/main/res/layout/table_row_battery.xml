@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:tag="sticky"
+        android:background="@color/background_title_scroll"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:text="Bateria"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:gravity="left"
+            android:layout_marginLeft="@dimen/padding_tablet"
+            style="@style/TextTableTitle"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Tabla5"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/padding_tablet"
+        android:layout_marginRight="@dimen/padding_tablet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="2" >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="Capacidada"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                style="@style/TextTableSubtitle" />
+
+            <TextView
+                android:id="@+id/battery_size"
+                android:text="3080 mAh"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                style="@style/TextTableContent" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/row_line_separator"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="Tipo"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                style="@style/TextTableSubtitle" />
+
+            <TextView
+                android:id="@+id/battery_type"
+                android:text="Lition"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                style="@style/TextTableContent" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/row_line_separator"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="Otros"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                style="@style/TextTableSubtitle" />
+
+            <TextView
+                android:id="@+id/battery_other"
+                android:text="No"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                style="@style/TextTableContent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

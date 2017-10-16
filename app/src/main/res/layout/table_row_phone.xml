@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:tag="sticky"
+        android:background="@color/background_title_scroll"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:text="Apariencia y Diseño"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:gravity="left"
+            android:layout_marginLeft="@dimen/padding_tablet"
+            style="@style/TextTableTitle"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Tabla6"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/padding_tablet"
+        android:layout_marginRight="@dimen/padding_tablet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="2" >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="Marca"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                style="@style/TextTableSubtitle" />
+
+            <TextView
+                android:id="@+id/phone_brand"
+                android:text="Nokia"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                style="@style/TextTableContent" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/row_line_separator"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="Sistema Operativo"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                style="@style/TextTableSubtitle" />
+
+            <TextView
+                android:id="@+id/phone_system"
+                android:text="Android 7.0"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                style="@style/TextTableContent" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/row_line_separator"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="Dimensiones"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                style="@style/TextTableSubtitle" />
+
+            <TextView
+                android:id="@+id/phone_dimensions"
+                android:text="155 mm de alto \n 75 mm de ancho \n 7 mm de espesor"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                style="@style/TextTableContent" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/row_line_separator"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="Peso"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                style="@style/TextTableSubtitle" />
+
+            <TextView
+                android:id="@+id/phone_weight"
+                android:text="180 gramos"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                style="@style/TextTableContent" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/row_line_separator"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="Material de constuccion"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                style="@style/TextTableSubtitle" />
+
+            <TextView
+                android:id="@+id/phone_materials"
+                android:text="Aluminio unibody"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                style="@style/TextTableContent" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/row_line_separator"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="Colores disponibles"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                style="@style/TextTableSubtitle" />
+
+            <TextView
+                android:id="@+id/phone_colors"
+                android:text="Azul, negro, blanco."
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                style="@style/TextTableContent" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/row_line_separator"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="Sensor de huellas"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                style="@style/TextTableSubtitle" />
+
+            <TextView
+                android:id="@+id/phone_fingerprint"
+                android:text="Delantero"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                style="@style/TextTableContent" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/row_line_separator"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="Jack de 3.5mm"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                style="@style/TextTableSubtitle" />
+
+            <TextView
+                android:id="@+id/phone_jack"
+                android:text="Si tiene"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                style="@style/TextTableContent" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/row_line_separator"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="Tarjeta Sim"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                style="@style/TextTableSubtitle" />
+
+            <TextView
+                android:id="@+id/phone_sim"
+                android:text="Dual Sim"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                style="@style/TextTableContent" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/row_line_separator"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="Presentado"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                style="@style/TextTableSubtitle" />
+
+            <TextView
+                android:id="@+id/phone_launch"
+                android:text="Enero 2018"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                style="@style/TextTableContent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

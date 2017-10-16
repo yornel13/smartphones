@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "678113490764",
+    "firebase_url": "https://smartphone-android.firebaseio.com",
+    "project_id": "smartphone-android",
+    "storage_bucket": "smartphone-android.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:678113490764:android:c8eacbe316cd757b",
+        "android_client_info": {
+          "package_name": "com.personal.yornel.androids"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "678113490764-4u21jtc1ha3i2a1fd4u2cbd3o2o30one.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA9K1KuQi7YEj2IlBrZ2xgXcd5d2NajIio"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

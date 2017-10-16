@@ -1,0 +1,169 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TableRow
+        android:tag="sticky"
+        android:background="@color/background_title_scroll"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:text="Camara"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:gravity="left"
+            android:layout_marginLeft="@dimen/padding_tablet"
+            style="@style/TextTableTitle"/>
+
+    </TableRow>
+
+    <LinearLayout
+        android:id="@+id/Tabla4"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/padding_tablet"
+        android:layout_marginRight="@dimen/padding_tablet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:stretchColumns="2" >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="Resolucion de Camara Principal"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                style="@style/TextTableSubtitle" />
+
+            <TextView
+                android:id="@+id/camera_principal_megapixels"
+                android:text="13 Megapixeles"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                style="@style/TextTableContent" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/row_line_separator"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="Apertura"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                style="@style/TextTableSubtitle" />
+
+            <TextView
+                android:id="@+id/camera_aperture"
+                android:text="f / 2.0"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                style="@style/TextTableContent" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/row_line_separator"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="Flash"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                style="@style/TextTableSubtitle" />
+
+            <TextView
+                android:id="@+id/camera_flash"
+                android:text="LED"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                style="@style/TextTableContent" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/row_line_separator"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="Sensor"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                style="@style/TextTableSubtitle" />
+
+            <TextView
+                android:id="@+id/camera_brand"
+                android:text="Sony"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                style="@style/TextTableContent" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/row_line_separator"/>
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="Camara Selfie"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                style="@style/TextTableSubtitle" />
+
+            <TextView
+                android:id="@+id/camera_secondary_megapixels"
+                android:text="5 Megapixeles"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                style="@style/TextTableContent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

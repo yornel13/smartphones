@@ -1,0 +1,141 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+
+        <!-- MaterialDrawer specific values -->
+        <item name="material_drawer_background">@color/material_drawer_background</item>
+        <item name="material_drawer_primary_text">@color/material_drawer_primary_text</item>
+        <item name="material_drawer_primary_icon">@color/material_drawer_primary_icon</item>
+        <item name="material_drawer_secondary_text">@color/material_drawer_secondary_text</item>
+        <item name="material_drawer_hint_text">@color/material_drawer_hint_text</item>
+        <item name="material_drawer_divider">@color/material_drawer_divider</item>
+        <item name="material_drawer_selected">@color/material_drawer_selected</item>
+        <item name="material_drawer_selected_text">@color/material_drawer_selected_text</item>
+        <item name="material_drawer_header_selection_text">@color/material_drawer_header_selection_text</item>
+    </style>
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+
+        <!-- MaterialDrawer specific values -->
+        <item name="material_drawer_background">@color/material_drawer_dark_background</item>
+        <item name="material_drawer_primary_text">@color/material_drawer_dark_primary_text</item>
+        <item name="material_drawer_primary_icon">@color/material_drawer_dark_primary_icon</item>
+        <item name="material_drawer_secondary_text">@color/material_drawer_dark_secondary_text</item>
+        <item name="material_drawer_hint_text">@color/material_drawer_dark_hint_text</item>
+        <item name="material_drawer_divider">@color/material_drawer_dark_divider</item>
+        <item name="material_drawer_selected">@color/material_drawer_dark_selected</item>
+        <item name="material_drawer_selected_text">@color/material_drawer_dark_selected_text</item>
+        <item name="material_drawer_header_selection_text">@color/material_drawer_dark_header_selection_text</item>
+    </style>
+
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+
+   <style name="TextTableTitle">
+       <item name="android:textSize">13sp</item>
+       <item name="android:textColor">@color/text_title_scroll</item>
+       <item name="fontPath">fonts/OpenSans-SemiBold.ttf</item>
+       <item name="android:paddingTop">6dp</item>
+       <item name="android:paddingBottom">6dp</item>
+   </style>
+
+   <style name="TextTableSubtitle">
+       <item name="android:textSize">14sp</item>
+       <item name="android:textColor">@color/text_subtitle_scroll</item>
+       <item name="fontPath">fonts/OpenSans-Bold.ttf</item>
+       <item name="android:paddingTop">16dp</item>
+       <item name="android:paddingBottom">16dp</item>
+   </style>
+
+   <style name="TextTableContent">
+       <item name="android:textSize">14sp</item>
+       <item name="android:textStyle">normal</item>
+       <item name="android:textColor">@color/text_content_scroll</item>
+       <item name="android:paddingTop">16dp</item>
+       <item name="android:paddingBottom">16dp</item>
+   </style>
+
+   <style name="TextToolbarTitle">
+       <item name="android:textSize">21sp</item>
+       <item name="android:textStyle">normal</item>
+       <item name="android:textColor">@color/white</item>
+       <item name="android:maxLength">20</item>
+   </style>
+
+   <style name="TextToolbarSubTitle">
+       <item name="android:textSize">12sp</item>
+       <item name="android:textStyle">normal</item>
+       <item name="android:textColor">@color/white</item>
+       <item name="android:maxLength">20</item>
+   </style>
+
+    <style name="TextCardTitle">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">@color/text_subtitle_scroll</item>
+        <item name="fontPath">fonts/OpenSans-Regular.ttf</item>
+    </style>
+
+    <style name="TextCardContent">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/text_content_scroll</item>
+    </style>
+
+    <style name="TextCardSearchTitle">
+        <item name="android:textSize">17sp</item>
+        <item name="android:textColor">@color/text_subtitle_scroll</item>
+        <item name="fontPath">fonts/OpenSans-Regular.ttf</item>
+    </style>
+
+    <style name="menu_labels_style">
+        <item name="android:padding">6dp</item>
+        <item name="android:background">@drawable/fab_label_background</item>
+        <item name="android:textColor">@color/text_content_scroll</item>
+        <item name="fontPath">fonts/OpenSans-Regular.ttf</item>
+    </style>
+
+    <style name="menu_text_search">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textStyle">normal</item>
+        <item name="android:textColor">@color/white</item>
+        <item name="android:maxLength">25</item>
+        <item name="fontPath">fonts/OpenSans-Bold.ttf</item>
+    </style>
+
+    <style name="MaterialSearchViewStyle">
+        <!-- Background for the search bar -->
+        <item name="searchBackground">@color/colorPrimary</item>
+
+        <item name="searchSuggestionIcon">@drawable/ic_clock</item>
+
+        <item name="searchSuggestionBackground">@color/white</item>
+
+        <item name="android:hint">Nombre del smartphone...</item>
+
+        <item name="android:textColorHint">@color/background_title_scroll</item>
+
+        <!-- Change clear text icon -->
+        <item name="searchCloseIcon">@drawable/ic_action_navigation_close_inverted</item>
+
+        <!-- Change up icon -->
+        <item name="searchBackIcon">@drawable/ic_action_navigation_arrow_back_inverted</item>
+
+        <!-- Change text color for edit text. This will also be the color of the cursor -->
+        <item name="android:textColor">@color/white</item>
+
+        <item name="android:textSize">25sp</item>
+
+    </style>
+
+
+
+
+</resources>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.design.widget.CoordinatorLayout
+    android:background="@color/white"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:nestedScrollingEnabled="true"
+    tools:context="com.personal.yornel.androids.app.DetailsActivity">
+
+    <android.support.design.widget.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:theme="@style/AppTheme.AppBarOverlay">
+
+        <android.support.v7.widget.Toolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="?attr/colorPrimary"
+            app:popupTheme="@style/AppTheme.PopupOverlay" >
+
+            <TextView
+                android:id="@+id/toolbar_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Android"
+                android:transitionName="@string/transition_name_name"
+                android:layout_gravity="center"
+                style="@style/TextToolbarTitle"/>
+
+        </android.support.v7.widget.Toolbar>
+
+    </android.support.design.widget.AppBarLayout>
+
+    <include
+        layout="@layout/content_smartphone_details" />
+
+    <FrameLayout
+        android:id="@+id/background_fab_menu"
+        android:visibility="gone"
+        android:clickable="true"
+        android:background="#60000000"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+    </FrameLayout>
+
+    <com.github.clans.fab.FloatingActionMenu
+        android:id="@+id/menu_fab"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end|bottom"
+        android:padding="@dimen/fab_margin"
+        app:layout_behavior="com.personal.yornel.androids.util.FabMenuBehavior"
+        app:menu_colorNormal="@color/colorAccent"
+        app:menu_colorPressed="@color/colorAccentTrans"
+        app:menu_colorRipple="@color/colorAccentTrans"
+        app:menu_labels_maxLines="1"
+        app:menu_labels_ellipsize="end"
+        app:menu_labels_style="@style/menu_labels_style">
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/action_save"
+            android:onClick="topAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/fab_add"
+            app:fab_colorNormal="@color/colorAccent"
+            app:menu_colorPressed="@color/colorAccentTrans"
+            app:fab_size="mini"
+            app:fab_label="Agregar a top" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/action_rating"
+            android:onClick="rating"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_start_white"
+            app:fab_colorNormal="@color/colorAccent"
+            app:menu_colorPressed="@color/colorAccentTrans"
+            app:fab_size="mini"
+            app:fab_label="Votar por el" />
+
+        <com.github.clans.fab.FloatingActionButton
+            android:id="@+id/action_review"
+            android:onClick="review"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_action_video_white"
+            app:fab_colorNormal="@color/colorAccent"
+            app:menu_colorPressed="@color/colorAccentTrans"
+            app:fab_size="mini"
+            app:fab_label="Ver Review" />
+
+    </com.github.clans.fab.FloatingActionMenu>
+
+</android.support.design.widget.CoordinatorLayout>

@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:tag="sticky"
+        android:background="@color/background_title_scroll"
+        android:orientation="horizontal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <TextView
+            android:text="Pantalla"
+            android:layout_weight="1"
+            android:layout_width="match_parent"
+            android:layout_height="fill_parent"
+            android:gravity="left"
+            android:layout_marginLeft="@dimen/padding_tablet"
+            style="@style/TextTableTitle"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/Tabla1"
+        android:orientation="vertical"
+        android:layout_marginLeft="@dimen/padding_tablet"
+        android:layout_marginRight="@dimen/padding_tablet"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content" >
+
+        <LinearLayout
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="Tamaño"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                style="@style/TextTableSubtitle" />
+
+            <TextView
+                android:id="@+id/screen_size"
+                android:text="5.5 pulgadas"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                style="@style/TextTableContent" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/row_line_separator"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="Resolución"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                style="@style/TextTableSubtitle" />
+
+            <TextView
+                android:id="@+id/screen_resolution"
+                android:text="1080 x 1920"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                style="@style/TextTableContent" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/row_line_separator"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="Densidad de Pixeles"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                style="@style/TextTableSubtitle" />
+
+            <TextView
+                android:id="@+id/screen_density"
+                android:text="401 dpi"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                style="@style/TextTableContent" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/row_line_separator"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="Ratio de Pantalla"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                style="@style/TextTableSubtitle" />
+
+            <TextView
+                android:id="@+id/screen_ratio"
+                android:text="55.0%"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                style="@style/TextTableContent" />
+
+        </LinearLayout>
+
+        <include
+            layout="@layout/row_line_separator"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:text="Tipo de pantalla"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="left"
+                style="@style/TextTableSubtitle" />
+
+            <TextView
+                android:id="@+id/screen_type"
+                android:text="IPS"
+                android:layout_weight="1"
+                android:layout_width="match_parent"
+                android:layout_height="fill_parent"
+                android:gravity="center"
+                style="@style/TextTableContent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
