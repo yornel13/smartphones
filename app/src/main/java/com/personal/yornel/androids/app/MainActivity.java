@@ -4,6 +4,7 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.graphics.Typeface;
 import android.os.Bundle;
+import android.support.annotation.NonNull;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
 import android.support.v4.util.Pair;
@@ -13,6 +14,12 @@ import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Toast;
 
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.auth.api.signin.GoogleSignInResult;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.SignInButton;
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.gson.Gson;
 import com.mikepenz.foundation_icons_typeface_library.FoundationIcons;
 import com.mikepenz.google_material_typeface_library.GoogleMaterial;
@@ -42,7 +49,7 @@ import java.util.ArrayList;
 import de.mrapp.android.dialog.MaterialDialog;
 
 public class MainActivity extends BaseActivity implements RecyclerClickListener.OnItemClickListener,
-        Drawer.OnDrawerItemClickListener {
+        Drawer.OnDrawerItemClickListener, GoogleApiClient.OnConnectionFailedListener {
 
     private static long ITEM_DRAWER_MORE_SEARCH = 0;
     private static long ITEM_DRAWER_QUALITY_PRICE = 1;
@@ -51,6 +58,10 @@ public class MainActivity extends BaseActivity implements RecyclerClickListener.
     private static long ITEM_DRAWER_SEARCH = 4;
     private static long ITEM_DRAWER_LOGIN = 5;
     private static long ITEM_DRAWER_EXIT = 6;
+
+    private GoogleApiClient googleApiClient;
+    private SignInButton googleSignInButton;
+    private static final int SIGN_IN_CODE = 777;
 
     private RecyclerView mRecyclerView;
     private LinearLayoutManager mLayoutManager;
@@ -76,7 +87,42 @@ public class MainActivity extends BaseActivity implements RecyclerClickListener.
         progressBar = findViewById(R.id.container_progress_bar);
 
         loadDrawer(toolbar);
+
+        GoogleSignInOptions gso = new GoogleSignInOptions.Builder(GoogleSignInOptions.DEFAULT_SIGN_IN)
+                .requestEmail()
+                .build();
+
+        googleApiClient = new GoogleApiClient.Builder(this)
+                .enableAutoManage(this, this)
+                .addApi(Auth.GOOGLE_SIGN_IN_API, gso)
+                .build();
     }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        if(requestCode == SIGN_IN_CODE) {
+            GoogleSignInResult result = Auth.GoogleSignInApi.getSignInResultFromIntent(data);
+            hadleSignInResult(result);
+        }
+    }
+
+    private void hadleSignInResult(GoogleSignInResult result) {
+        if(result.isSuccess()) {
+            goMainScreen();
+            PrimaryDrawerItem itemLogin = new PrimaryDrawerItem().withIdentifier(ITEM_DRAWER_LOGIN).withName("Salir").withSelectable(false);
+            itemLogin.withIcon(GoogleMaterial.Icon.gmd_perm_identity);
+        }else{
+            Toast.makeText(this, "No se pudo acceder", Toast.LENGTH_SHORT).show();
+        }
+    }
+
+    private void goMainScreen() {
+        Intent intent = new Intent(this, MainActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP | Intent.FLAG_ACTIVITY_CLEAR_TASK | Intent.FLAG_ACTIVITY_NEW_TASK);
+        startActivity(intent);
+    }
+
 
     private void loadDrawer(Toolbar toolbar) {
 
@@ -222,14 +268,29 @@ public class MainActivity extends BaseActivity implements RecyclerClickListener.
 
     private void showDialogComing() {
         MaterialDialog.Builder dialogBuilder = new MaterialDialog.Builder(this);
-        dialogBuilder.setTitle("Ops lo sentimos!");
-        dialogBuilder.setMessage("Esta funcionalidad aun no esta implementa, esperala muy pronto.");
+
+
+        //googleSignInButton = (SignInButton) findViewById(R.id.google_signIn_button);
+        //dialogBuilder.setTitle("Ops lo sentimos!");
+        //dialogBuilder.setMessage("Esta funcionalidad aun no esta implementa, esperala muy pronto.");
         dialogBuilder.showHeader(true);
+        dialogBuilder.setView(R.layout.sign_in_buttons);
         dialogBuilder.setHeaderBackground(R.drawable.smartphones_splash);
-        dialogBuilder.setHeaderIcon(R.drawable.ic_suggestion);
+
+        //dialogBuilder.setHeaderIcon(R.drawable.ic_suggestion);
         dialogBuilder.setPositiveButton(android.R.string.ok, null);
         MaterialDialog dialog = dialogBuilder.create();
         dialog.show();
+        SignInButton signInButton = (SignInButton) dialog.findViewById(R.id.google_signIn_button);
+        signInButton.setSize(SignInButton.SIZE_WIDE);
+        signInButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                System.out.println("hola");
+                Intent intent = Auth.GoogleSignInApi.getSignInIntent(googleApiClient);
+                startActivityForResult(intent, SIGN_IN_CODE);
+            }
+        });
     }
 
     @Subscribe
@@ -263,4 +324,11 @@ public class MainActivity extends BaseActivity implements RecyclerClickListener.
             mainAdapter.replaceAll(event.getResponse());
         }
     }
+
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+
+    }
+
+
 }

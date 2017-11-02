@@ -8,6 +8,7 @@ import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
 import android.os.Handler;
+import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.app.ActivityOptionsCompat;
@@ -28,6 +29,11 @@ import android.widget.Toast;
 
 import com.emilsjolander.components.StickyScrollViewItems.StickyScrollView;
 import com.github.clans.fab.FloatingActionMenu;
+import com.google.android.gms.auth.api.Auth;
+import com.google.android.gms.auth.api.signin.GoogleSignInOptions;
+import com.google.android.gms.common.ConnectionResult;
+import com.google.android.gms.common.SignInButton;
+import com.google.android.gms.common.api.GoogleApiClient;
 import com.google.gson.Gson;
 import com.personal.yornel.androids.R;
 import com.personal.yornel.androids.adapter.OtherAdapter;
@@ -49,12 +55,15 @@ import static com.personal.yornel.androids.util.AppUtil.convertPixelsToDp;
 import static com.personal.yornel.androids.util.AppUtil.getNavigationBarSize;
 import static com.personal.yornel.androids.util.AppUtil.getStatusBarHeight;
 
-public class DetailsActivity extends BaseActivity implements RecyclerClickListener.OnItemClickListener {
+public class DetailsActivity extends BaseActivity implements RecyclerClickListener.OnItemClickListener, GoogleApiClient.OnConnectionFailedListener {
 
     private Smartphone smartphone;
     private ImageView smartphoneImage;
     private FloatingActionMenu fabMenu;
     private StickyScrollView stickyScrollView;
+
+    private GoogleApiClient googleApiClient;
+
 
     private TextView titleScreen;
     private TextView titleContentScreen;
@@ -115,6 +124,8 @@ public class DetailsActivity extends BaseActivity implements RecyclerClickListen
     private OtherAdapter adapter;
     private static View transitionView;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -125,6 +136,7 @@ public class DetailsActivity extends BaseActivity implements RecyclerClickListen
 
         fabMenu = (FloatingActionMenu) findViewById(R.id.menu_fab);
         setFabAction();
+
 
         stickyScrollView = (StickyScrollView) findViewById(R.id.scrollView);
         setOnScroll();
@@ -465,10 +477,16 @@ public class DetailsActivity extends BaseActivity implements RecyclerClickListen
         startActivity(intent);
     }
 
-    WizardDialog dialog;
     public void rating(View view) {
         closeFab();
+
+    }
+
+    WizardDialog dialog;
+    public void hola(View view){
+
         WizardDialog.Builder dialogBuilder = new WizardDialog.Builder(this);
+        //googleSignInButton = (SignInButton) findViewById(R.id.google_signIn_button);
         dialogBuilder.setMessageColor(getResources().getColor(R.color.white));
         dialogBuilder.setButtonTextColor(getResources().getColor(R.color.white));
         dialogBuilder.setTitleColor(getResources().getColor(R.color.white));
@@ -483,11 +501,17 @@ public class DetailsActivity extends BaseActivity implements RecyclerClickListen
         dialogBuilder.setBackground(R.color.material_drawer_dark_background);
         dialogBuilder.setFinishButtonText("CERRAR");
         dialog.show(getSupportFragmentManager(), "");
+        System.out.println("hola");
     }
 
     public void review(View view) {
         closeFab();
         startActivity(new Intent(Intent.ACTION_VIEW, Uri.parse(smartphone.getReview())));
+    }
+
+    @Override
+    public void onConnectionFailed(@NonNull ConnectionResult connectionResult) {
+
     }
 
     public static class DialogRating extends Fragment {
